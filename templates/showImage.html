@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrapped Images</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+<div class="table-users">
+   <div class="header">Some of the scrapped images:</div>
+    <table>
+{% for user_image in user_images %}
+        <td width="400">
+            <img width="300" height="300" src="{{ url_for('static', filename='images/'+user_image) }}" alt="User Image"></td>
+{% endfor %}
+    </table>
+</div>
+</body>
+</html>
